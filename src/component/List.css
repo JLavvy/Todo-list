@@ -1,77 +1,142 @@
-.todo-container{
-    width: 600px;
-    margin: 0 auto;
-    border: 2px solid #ccc;
-    padding: 30px;
-    border-radius: 10px;
-    color: black;
-   
-}
-h1{
-    margin-bottom: 30px;
-}
-input{
-    width: 400px;
-    padding: 10px ;
-    margin-right: 10px;
-    border-radius: 10px;
-    background-color: #522B5B;
-    border: none;
-    color: white;
-    
+.todo-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 10px;
+  border: 3px solid #9290C3;
 }
 
-button{
-    padding:  10px 20px;
-    cursor: pointer;
-    background-color: #854F6C;
-    border: none;
-    border-radius: 5px;
-    color: black;
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: black;
+}
+
+input,
+button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #9290C3;
+  border-radius: 4px;
+  outline: none;
+  background-color: transparent;
+}
+
+input {
+  width: 80%;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  color: #000;
+}
+
+button {
+  background-color: #9290C3;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 .task-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
-    margin-top: 20px;
-   
-  }
-  
-  .task-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-   
-  }
-  
-  .task-textarea {
-    background-color: #bde4ff;
-    padding: 1px;
-    font-size: 18px;
-    resize: none;
-    border: none;
-    border-radius: 5px;
-    width: 50%;
-    margin-right: 80px; 
-  }
-  .task-actions {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    width: 100%;
-  }
-  .delete-task-button {
-    background-color: transparent;
-    color: red;
-    cursor: pointer;
-    border: none;
-   
+  padding: 10px;
+  list-style: none;
+  margin: 0;
+}
 
-    
+.task-list li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px; 
+  background-color: none;
+  padding: 10px; 
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(162, 169, 25, 0.05);
+  flex-wrap: wrap;
+}
+
+.task-text-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.task-list li .created-at {
+  font-size: 12px;
+  color: black;
+  margin-right: 5px;
+  margin-top: 4px;
+}
+
+.task-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #9290C3;
+  padding: 5px ; 
+  
+  
+}
+
+.task-textarea {
+  width: calc(100% - 40px);
+  resize: none;
+  border: none;
+  outline: none;
+  margin-right: px;
+  font-size: 15px;
+  line-height: 1.5;
+  background-color: transparent;
+  color: #000;
+  
+}
+
+.task-container input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+  color: aquamarine;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.task-textarea--completed {
+  text-decoration: line-through;
+  color: white;
+}
+
+.delete-task-button {
+  border: none;
+  cursor: pointer;
+  margin-right: -2px; 
+ 
+}
+
+.delete-task-button svg {
+  font-size: 18px;
+  color: red;
+}
+
+@media (max-width: 768px) {
+  input,
+  button {
+    font-size: 14px; 
   }
+  
+  .task-list li {
+    padding: 8px; 
+  }
+  .task-container {
+    padding: 8px; 
+  }
+  
+  .delete-task-button {
+    margin-right: -2px; 
+  }
+}
